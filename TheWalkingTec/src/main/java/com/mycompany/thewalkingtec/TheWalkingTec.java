@@ -11,6 +11,6 @@ package com.mycompany.thewalkingtec;
 public class TheWalkingTec {
 
     public static void main(String[] args) {
-        System.out.println("Hola!");
+        System.out.println("Holiii");
     }
 }
