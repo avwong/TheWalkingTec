@@ -19,6 +19,7 @@ public abstract class Tropa extends Thread{
     private int nivel = 0;
     private int alcance;
     private int nivelDeAparicion;
+    private int fila, columna; //posicion
     //TODO: private Pantalla refPantalla;
     
     public abstract void atacar(Defensa objetivoAAtacar);
@@ -81,6 +82,16 @@ public abstract class Tropa extends Thread{
         return nivelDeAparicion;
     }
 
+    public int getFila() {
+        return fila;
+    }
+
+    public int getColumna() {
+        return columna;
+    }
+    
+    
+
     public void setNombre(String nombre) {
         this.nombre = nombre;
     }
@@ -108,6 +119,15 @@ public abstract class Tropa extends Thread{
     public void setNivelDeAparicion(int nivelDeAparicion) {
         this.nivelDeAparicion = nivelDeAparicion;
     }
+
+    public void setFila(int fila) {
+        this.fila = fila;
+    }
+
+    public void setColumna(int columna) {
+        this.columna = columna;
+    }
+    
     
     
     

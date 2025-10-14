@@ -10,9 +10,15 @@ package com.mycompany.thewalkingtec;
  */
 public abstract class Zombies {
     
-    private int velocidad;
+    private int velocidad; //velocidad a la que se mueve
+    private Defensa objetivoActual; //el objetivo más cercano para atacar
     
     public void moverse(){
+        
+    }
+    
+    public void buscarObjetivo(){
+        objetivoActual = null; //resetear el objetivo mas cercano
         
     }
     
