@@ -9,5 +9,15 @@ package com.mycompany.thewalkingtec;
  * @author Alina
  */
 public class ZombieAereo extends Zombies{
+
+    @Override
+    public boolean puedeAtacar(Defensa objetivoActual) {
+        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
+    }
+
+    @Override
+    public void atacar(Defensa objetivoAAtacar) {
+        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
+    }
     
 }

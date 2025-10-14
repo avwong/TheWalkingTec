@@ -128,8 +128,5 @@ public abstract class Tropa extends Thread{
         this.columna = columna;
     }
     
-    
-    
-    
-    
+
 }

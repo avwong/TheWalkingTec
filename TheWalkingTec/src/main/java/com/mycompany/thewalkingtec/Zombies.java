@@ -8,18 +8,59 @@ package com.mycompany.thewalkingtec;
  *
  * @author Alina
  */
-public abstract class Zombies {
+public abstract class Zombies extends Tropa{
     
     private int velocidad; //velocidad a la que se mueve
     private Defensa objetivoActual; //el objetivo más cercano para atacar
     
-    public void moverse(){
-        
+    
+    @Override
+    public void run() {
+        while (getVida() > 0) {
+            buscarObjetivo();  // buscar defensa cercana
+            moverHaciaObjetivo();
+            
+            if (objetivoActual != null && puedeAtacar(objetivoActual)) {
+                atacar(objetivoActual);
+            }
+            try {
+                Thread.sleep(500);
+            } catch (InterruptedException e) {
+            }
+        }
     }
+
+    
     
     public void buscarObjetivo(){
         objetivoActual = null; //resetear el objetivo mas cercano
         
+        
+        
+
     }
+    
+    public void moverHaciaObjetivo(){
+        
+        int tamañoCasilla = 20; //20px
+        int x = getColumna() * tamañoCasilla;
+        int y = getFila() * tamañoCasilla;
+
+        if (getColumna() < objetivoActual.getColumna()) {
+            setColumna(getColumna() + 1);
+        } else if (getColumna() > objetivoActual.getColumna()) {
+            setColumna(getColumna() - 1);
+        }
+
+        if (getFila() < objetivoActual.getFila()) {
+            setFila(getFila() + 1);
+        } else if (getFila() > objetivoActual.getFila()) {
+            setFila(getFila() - 1);
+        }
+
+        
+    }
+    
+    public abstract boolean puedeAtacar(Defensa objetivoActual); //según su tipo y rango
     
 }
