@@ -8,14 +8,6 @@ package com.mycompany.thewalkingtec;
  *
  * @author Alina
  */
-public class Defensa extends Tropa{
-    
-    //El ejército inicia con 20 espacios de defensas y cada nivel alcanzado se sumará la capacidad de crear 5 espacios más.
-
-    @Override
-    public void atacar(Defensa objetivoAAtacar) {
-    
-    }
-
+public class ZombieContacto extends Zombies{
     
 }

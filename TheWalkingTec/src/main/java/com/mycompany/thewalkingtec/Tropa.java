@@ -10,20 +10,30 @@ import javax.swing.ImageIcon;
  *
  * @author Alina
  */
-public abstract class Tropa {
+public abstract class Tropa extends Thread{
     
     private String nombre;
     private ImageIcon apariencia;
     private int vida;
     private int danoPorSegundo;
-    private int nivel = 1;
+    private int nivel = 0;
     private int alcance;
     private int nivelDeAparicion;
     //TODO: private Pantalla refPantalla;
     
     public abstract void atacar(Defensa objetivoAAtacar);
     
-    public abstract void recibirAtaque(int danoPorSegundo);
+    public int recibirAtaque(int danoPorSegundo){
+        if (vida <= 0) return -1;
+        
+        vida -= danoPorSegundo;
+        
+        if (vida <= 0){
+            morir();
+        }
+        
+        return vida;
+    }
     
     public void subirNivel(){
         this.nivel += 1; 
