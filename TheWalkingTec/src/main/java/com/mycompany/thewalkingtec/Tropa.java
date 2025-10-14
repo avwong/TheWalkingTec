@@ -51,4 +51,65 @@ public abstract class Tropa extends Thread{
     }
     
     
+    //GETTERS Y SETTERS
+
+    public String getNombre() {
+        return nombre;
+    }
+
+    public ImageIcon getApariencia() {
+        return apariencia;
+    }
+
+    public int getVida() {
+        return vida;
+    }
+
+    public int getDanoPorSegundo() {
+        return danoPorSegundo;
+    }
+
+    public int getNivel() {
+        return nivel;
+    }
+
+    public int getAlcance() {
+        return alcance;
+    }
+
+    public int getNivelDeAparicion() {
+        return nivelDeAparicion;
+    }
+
+    public void setNombre(String nombre) {
+        this.nombre = nombre;
+    }
+
+    public void setApariencia(ImageIcon apariencia) {
+        this.apariencia = apariencia;
+    }
+
+    public void setVida(int vida) {
+        this.vida = vida;
+    }
+
+    public void setDanoPorSegundo(int danoPorSegundo) {
+        this.danoPorSegundo = danoPorSegundo;
+    }
+
+    public void setNivel(int nivel) {
+        this.nivel = nivel;
+    }
+
+    public void setAlcance(int alcance) {
+        this.alcance = alcance;
+    }
+
+    public void setNivelDeAparicion(int nivelDeAparicion) {
+        this.nivelDeAparicion = nivelDeAparicion;
+    }
+    
+    
+    
+    
 }
