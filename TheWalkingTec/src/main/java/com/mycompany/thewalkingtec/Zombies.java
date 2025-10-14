@@ -17,6 +17,9 @@ public abstract class Zombies extends Tropa{
     @Override
     public void run() {
         while (getVida() > 0) {
+            
+            //paso x paso de como atacan los zombies
+            
             buscarObjetivo();  // buscar defensa cercana
             moverHaciaObjetivo();
             
@@ -62,5 +65,18 @@ public abstract class Zombies extends Tropa{
     }
     
     public abstract boolean puedeAtacar(Defensa objetivoActual); //según su tipo y rango
+
+    
+    //GETTERS
+    public int getVelocidad() {
+        return velocidad;
+    }
+
+    public Defensa getObjetivoActual() {
+        return objetivoActual;
+    }
+    
+    
+    
     
 }

@@ -9,15 +9,20 @@ package com.mycompany.thewalkingtec;
  * @author Alina
  */
 public class ZombieContacto extends Zombies{
+    
+    
 
     @Override
     public boolean puedeAtacar(Defensa objetivoActual) {
-        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
+        // Solo puede atacar si está en la misma casilla
+        return getFila() == objetivoActual.getFila() && getColumna() == objetivoActual.getColumna();
     }
 
     @Override
     public void atacar(Defensa objetivoAAtacar) {
-        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
+        if (objetivoAAtacar != null) {
+            objetivoAAtacar.recibirAtaque(getDanoPorSegundo());
+        }
     }
     
 }
