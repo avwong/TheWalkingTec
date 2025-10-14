@@ -16,10 +16,29 @@ public abstract class Tropa {
     private ImageIcon apariencia;
     private int vida;
     private int danoPorSegundo;
-    private int nivel;
+    private int nivel = 1;
     private int alcance;
     private int nivelDeAparicion;
     //TODO: private Pantalla refPantalla;
+    
+    public abstract void atacar(Defensa objetivoAAtacar);
+    
+    public abstract void recibirAtaque(int danoPorSegundo);
+    
+    public void subirNivel(){
+        this.nivel += 1; 
+    }
+    
+    public void morir(){
+        if (vida <= 0) {
+            //TODO
+            //detenerlo
+            //this.setStop();
+            vida = 0;
+            //ponerle imagen de RIP
+            //refPantalla.pintarTropa(refLabel);
+        }
+    }
     
     
 }
