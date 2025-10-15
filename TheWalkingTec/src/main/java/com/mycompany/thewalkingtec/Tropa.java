@@ -21,6 +21,7 @@ public abstract class Tropa extends Thread{
     private int nivelDeAparicion;
     private int fila, columna; //posicion
     //TODO: private Pantalla refPantalla;
+    private int id; //para registrar exactamente quien mata a quien 
     
     public abstract void atacar(Defensa objetivoAAtacar);
     
@@ -130,3 +131,4 @@ public abstract class Tropa extends Thread{
     
 
 }
+
